@@ -1,0 +1,108 @@
+.principles {
+
+    &__item{
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__thumb{
+        display: flex;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        background-color: #F5F4FA;
+    
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-bottom: 30px;
+
+        height: 120px;
+        width: 100%;
+    }
+
+    &__list{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    &__title{
+        color: $blacknav;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+
+        text-align: center;
+    
+        margin: 0px 0px 10px 0px;
+        padding: 0px;
+    }
+
+    &__deskrp{
+        font-size: 14px;
+    
+        line-height: 1.714;
+        letter-spacing: 0.03em;
+    
+        margin: 0px;
+        padding: 0px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width:$desktop){
+
+        margin-right: auto;
+        margin-left: auto;
+
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        &__item{
+
+            flex-basis: calc((100% - 2*15px)/2);
+            margin-bottom: 0;
+            
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+
+    }    
+
+    @media screen and (min-width: $desktop){
+
+    display: block;
+    padding-bottom: 47px;
+
+    &__list{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: unset;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    &__item{
+
+        max-width: 270px;
+
+        &:not(:last-child) {
+            margin-bottom: 0px;
+            margin-right: 30px;
+        }
+    }
+
+    &__thumb{
+        display: flex;
+        width: 270px;
+    }
+
+    &__title{
+        text-align: left;
+    }
+}
+}

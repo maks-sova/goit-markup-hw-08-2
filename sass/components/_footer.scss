@@ -1,0 +1,237 @@
+.footer{
+    
+    background-color: $dbgcolorblack;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    text-align: center;
+
+    &__logo{
+        color: $brandwhite;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    &__adress {
+        text-decoration: none;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.714;
+        color: $brandwhite;
+        letter-spacing: 0.03em;
+        
+        transition: color $transitoin-property;
+
+        &:hover, &:focus{
+            color:$brandblue;
+        }
+    }
+
+    &__item:not(:last-child){
+        display:block;
+        margin-bottom: 8px;
+    }
+    
+    &__link{
+        text-decoration: none;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.714;
+        color:$whiteop;
+        letter-spacing: 0.03em;
+        
+        transition: color $transitoin-property;
+
+        &:hover, &:focus{
+            color:$brandblue;
+        }
+        }
+
+    &__nav{
+        display: block;
+        margin-bottom: 60px;
+    }
+
+    &__socillinks{
+        margin-bottom: 60px;
+    }
+
+    &__socillink{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $brandwhite;
+    }
+
+    &__title{
+        margin: 0px;
+        padding: 0px;
+    
+        text-transform: uppercase;
+        font-weight: 700px;
+        font-size: 14px;
+        line-height: 1.14;
+        color: $brandwhite;
+        margin-bottom: 20px;
+    }
+
+    &__caption{
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.17;
+        color: $brandwhite;
+        
+        padding-bottom: 20px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop){       
+
+    &__columns{
+        max-width: 768px;
+        position: relative;
+    }
+
+    &__nav{
+        position: absolute;
+        left: 76px;
+    }
+
+    &__socillinks{
+        position: absolute;
+        right: 89px;
+    }
+
+    &__form{
+        display: block;
+        padding-top: 187px;
+    }
+
+}
+
+    @media screen and (min-width: $desktop){
+
+    text-align: unset;    
+
+    &__columns{
+        position: unset;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__nav{
+        position: unset;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    &__socillinks{
+        position: unset;
+        margin-bottom: 0;
+        margin-top: 12px;
+        margin-left: 70px;
+    }
+
+
+    &__list{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    &__item:not(:last-child){
+        display:block;
+        margin-bottom: 9px;
+    }
+
+    &__form{
+        padding-top: 0;
+        margin-top: 12px;
+        margin-left: 93px;
+    }
+}
+}
+
+// form in footer
+.form{
+
+    &__mail{
+        height: 50px;
+        width: 100%;
+        background-color: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    
+        padding: 15px;
+        margin-right: 12px;
+        margin-bottom: 20px;
+    
+        color: $brandwhite;
+
+        &::placeholder{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.25;
+            color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop){
+       &__mail{
+          width: 450px;
+       }   
+    }
+
+    @media screen and (min-width: $desktop){
+
+    display: flex;  
+    justify-content: center;
+    align-items: center;    
+   
+    &__mail{
+        width: 358px;
+        margin-bottom: 0;
+    }   
+}
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 50px;
+    background-color: $brandblue;
+    border-radius: 4px;
+    border: none;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+
+    transition: background-color $transitoin-property;
+
+    &:focus, 
+    &:hover{
+        background-color:$button-focus;
+    }
+
+    &__icon{
+        fill: $brandwhite;
+    }
+
+    &__text{
+        color: $brandwhite;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+    
+        margin: 0;
+        padding: 0;
+        margin-right: 10px;
+    
+    }
+
+}

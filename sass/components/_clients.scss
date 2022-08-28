@@ -1,0 +1,74 @@
+.clients{
+
+    &__list{
+        
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        margin: 0px;
+    }
+
+    &__nav{
+        
+        display: flex;
+        height: 92px;
+        border-radius: 4px;
+        color: $iconfill;
+        border: 1px solid $iconfill;
+    
+        justify-content: center;
+        align-items: center;
+    
+        transition: color $transitoin-property,
+        border-color $transitoin-property;
+
+        &:hover, &:focus{
+            color: $brandblue;
+            border-color: $brandblue;
+        }
+    }
+
+    &__card{
+        flex-basis: calc((100% - 2*15px)/2); 
+    }
+    
+    &__icon{
+        fill: currentColor; 
+    }
+   
+   @media screen and (min-width: $tablet) and (max-width:$desktop){
+    
+   &__card{
+        flex-basis: calc((100% - 3*20px)/3); 
+   }
+
+   }
+   
+   @media screen and (min-width: $desktop){
+    
+   &__list{
+
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: nowrap;
+       gap: 0px;
+
+       padding: 0px;
+    }
+
+    &__card:not(:last-child){
+       margin-right: 30px;
+    }
+
+    &__nav{
+
+        display: flex;
+        width: 170px;
+        height: 92px;
+    }
+    
+
+    }
+}
